@@ -1,0 +1,52 @@
+<p>one-way-data-binding works!</p>
+<h1>ts to html</h1>
+<ul>
+  <li>
+    String Interpolation
+    <ul>
+      <li>Student Name: {{studentName}}</li>
+      <li>Student Course: {{studentCourse}}</li>
+      <li>Student Fees: {{studentFees}}</li>
+      <li>Discount: {{studentDiscount}}</li>
+      <li>Total Fees: {{studentFees-studentDiscount}}</li>
+    </ul>
+  </li>
+  <li>
+    Property Binding
+    <ul>
+      <li>
+        <button type="button">normal</button>
+        <br>
+        <button type="button" disabled="{{isDisabled}}" style="{{style}}">String Interpolation</button>
+        <br>
+        <button type="button" [disabled]="isDisabled" [style]="style">Property Binding</button>
+        <br>
+      </li>
+      <li>
+        <input [type]="type">
+        <input type="text" [style]="style">
+      </li>
+    </ul>
+  </li>
+  <li>
+    Difference between String Interpolation and Property Binding
+    <ul>
+      <li [style]="style">
+        Message: {{msg}}
+      </li>
+      <li [innerHTML]="msg" style="{{style}}"></li>
+    </ul>
+  </li>
+</ul>
+
+<h1>html to ts</h1>
+<ul>
+  <li>
+    <button type="button" (click)="greet('Vimal')">Click here</button>
+    <br>
+    <button type="button" (click)="calculateFees(4000)">Discount</button>
+    <br>
+    <input type="number" size="20" #discountInput (keyup)="objectPassingFunction(discountInput)">
+    <button type="button" (click)="objectPassingFunction(discountInput)">Calculate</button>
+  </li>
+</ul>

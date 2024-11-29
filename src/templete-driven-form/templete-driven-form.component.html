@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-6">
+    <form #EmployeeForm="ngForm" (ngSubmit)="addEmployee(EmployeeForm)">
+      Employee Name: <input class="form-control" type="text" name="name" ngModel required><br>
+      Salary: <input class="form-control" type="number" name="salary" ngModel required><br>
+      Date of Birth: <input class="form-control" type="date" name="birthDate" ngModel required><br>
+      Status:  <input  type="checkbox" name="status" value="single" ngModel>Single
+      <input type="checkbox" name="status" value="married" ngModel>Married
+      <input type="checkbox" name="status" value="divorced" ngModel>Divorced
+      <input type="checkbox" name="status" value="widow" ngModel>Widow <br><br>
+      Gender:  <input type="radio" name="gender" value="Male" ngModel>Male
+      <input type="radio" name="gender" value="Female" ngModel>Female <br><br>
+      Nationality:  <select name="country" ngModel>
+        <option value="india">India</option>
+        <option value="usa" >USA</option>
+        <option value="China">China</option>
+        <option value="UK">UK</option>
+        <option value="Iran">Iran</option>
+        <option value="Iraq">Iraq</option>
+      </select><br><br>
+      <button type="submit" [disabled]="EmployeeForm.invalid">Submit</button>
+    </form>
+  </div>
+  <div class="col-6">
+    <h2>Employee Details</h2>
+    @for (emp of employeeList; track $index){
+        Employee Name: {{emp.name}}<br>
+        Salary: {{emp.salary}}<br>
+        Date of Birth: {{emp.birthDate}}<br>
+        Status: {{emp.status}}<br>
+        Gender: {{emp.gender}}<br>
+        Nationality: {{ emp.country }}<br><br>
+
+    }
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-lg-6">
+    <h1>If Statement</h1>
+    <!--@if (false){
+      <span>True Part</span>
+    } @else {
+      <span>False Part</span>
+    }-->
+    <!--<button type="button" (click)="showDiv(true)">show</button>
+    <button type="button" (click)="showDiv(false)">hide</button>
+
+    @if (isVisible){
+      <div class="bg-primary">
+        <span>Div is visible</span>
+      </div>
+    }
+    @else {
+      <div class="bg-danger">
+        <span>Div is hidden</span>
+      </div>
+    }-->
+    <form>
+      Student Name: <input class="form-control" type="text" name="studentName" [(ngModel)]="studentName"><br>
+      Maths: <input class="form-control" type="number" name="maths" [(ngModel)]="maths"><br>
+      Science: <input class="form-control" type="number" name="science" [(ngModel)]="science"><br>
+      English: <input class="form-control" type="number" name="english" [(ngModel)]="english"><br>
+      <button type="button" (click)="addStudent({studentName:studentName,maths:maths,science:science,english:english})">Submit</button>
+    </form>
+  </div>
+
+  <div class="col-lg-6">
+    <h2>Student Details:</h2>
+    @for (students of studentList; track $index+1){
+      Student Name: {{students.studentName}} <br>
+      Maths: {{students.maths}}<br>
+      Science: {{students.science}}<br>
+      English: {{students.english}}<br><br>
+    }
+
+  </div>
+
+</div>
+

@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-6">
+    <form [formGroup]="employeeForm" (ngSubmit)="addEmployee()">
+      Employee Name: <input class="form-control" type="text" formControlName="name"><br>
+      Salary: <input class="form-control" type="number" formControlName="salary"><br>
+      Date of Birth: <input class="form-control" type="date" formControlName="birthDate"><br>
+      Status:  <input  type="checkbox" formControlName="status" value="single">Single
+      <input type="checkbox" formControlName="status" value="married">Married
+      <input type="checkbox" formControlName="status" value="divorced">Divorced
+      <input type="checkbox" formControlName="status" value="widow"
+      >Widow <br><br>
+      Gender:  <input type="radio" formControlName="gender" value="Male">Male
+      <input type="radio" formControlName="gender" value="Female">Female <br><br>
+      Nationality:  <select formControlName="country" >
+      <option value="india">India</option>
+      <option value="usa" >USA</option>
+      <option value="China">China</option>
+      <option value="UK">UK</option>
+      <option value="Iran">Iran</option>
+      <option value="Iraq">Iraq</option>
+    </select><br><br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <div class="col-6">
+    <h2>Employee Details:</h2>
+    @for (emp of employeeList; track $index){
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{emp.name}}</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Salary: {{emp.salary}}</h6>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Date of Birth: {{emp.birthDate}}</h6>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Gender: {{emp.gender}}</h6>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Status: {{emp.status}}</h6>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Nationality: {{emp.country}}</h6>
+
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    }
+  </div>
+</div>
