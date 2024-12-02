@@ -9,6 +9,7 @@ import {TempleteDrivenFormComponent} from '../templete-driven-form/templete-driv
 import {ModelDrivenFormComponent} from '../model-driven-form/model-driven-form.component';
 import {EmployeeEntryComponent} from '../employee-entry/employee-entry.component';
 import {EmployeeViewComponent} from '../employee-view/employee-view.component';
+import {ApiCallingComponent} from '../api-calling/api-calling.component';
 
 export const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -20,5 +21,6 @@ export const routes: Routes = [
   {path:'tdf', component:TempleteDrivenFormComponent},
   {path:'mdf', component:ModelDrivenFormComponent},
   {path:'entry', component:EmployeeEntryComponent},
-  {path:'view', component:EmployeeViewComponent}
+  {path:'view', component:EmployeeViewComponent},
+  {path:'apiCalling',component:ApiCallingComponent}
 ];
