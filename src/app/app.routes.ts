@@ -10,6 +10,7 @@ import {ModelDrivenFormComponent} from '../model-driven-form/model-driven-form.c
 import {EmployeeEntryComponent} from '../employee-entry/employee-entry.component';
 import {EmployeeViewComponent} from '../employee-view/employee-view.component';
 import {ApiCallingComponent} from '../api-calling/api-calling.component';
+import {PostProductComponent} from '../post-product/post-product.component';
 
 export const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -22,5 +23,6 @@ export const routes: Routes = [
   {path:'mdf', component:ModelDrivenFormComponent},
   {path:'entry', component:EmployeeEntryComponent},
   {path:'view', component:EmployeeViewComponent},
-  {path:'apiCalling',component:ApiCallingComponent}
+  {path:'apiCalling',component:ApiCallingComponent},
+  {path:'post',component:PostProductComponent}
 ];

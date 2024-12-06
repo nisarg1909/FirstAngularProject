@@ -10,10 +10,9 @@ import {ApiService} from '../api.service';
 })
 export class ApiCallingComponent {
 
+
   apiService:ApiService= inject(ApiService);
 
-  public getProductsApi():any{
-    console.log(this.apiService.getProducts());
-  }
+
 
 }
